@@ -1,4 +1,4 @@
-<div class="wrap">
+<!-- <div class="wrap">
   <div class="grid">
     <article class="card">
       <h3 class="card__title">Artist directory</h3>
@@ -13,11 +13,19 @@
   <div class="dropdown">
     <ul class="dropdown-list" role="list">
       <li class="dropdown-list__list-item" *ngFor="let artist of artists">
-        <a href="#" (click)="showArtist(artist)"
-          ><strong>{{ artist.name }}</strong>
+        <a href="#" (click)="showArtist(artist)">
+          <img
+            class="mr-3 rounded align-self-center img-fluid"
+            style="width:70px;"
+            [src]="'./assets/images/' + artist.shortname + '_tn.jpg'"
+            alt="{{ 'Photo of ' + artist.name }}"
+          />
+          /><strong>{{ artist.name }}</strong>
           <p>{{ artist.reknown }}</p></a
         >
       </li>
     </ul>
   </div>
-</div>
+</div> -->
+
+<img src="./assets/images/Barot_Bellingham.jpg" alt="" />
