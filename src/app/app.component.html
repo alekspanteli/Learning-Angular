@@ -6,7 +6,7 @@
         <div class="form__label" *ngIf="query">
           <strong>For:</strong>{{ query }}
         </div>
-        <input type="text" class="form__input" />
+        <input type="text" class="form__input" [(ngModel)]="query" />
       </div>
     </article>
   </div>
