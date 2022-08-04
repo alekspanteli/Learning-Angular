@@ -30,6 +30,7 @@
   row-gap: 10px;
   &__list-item {
     > a {
+      display: block;
       color: green;
       &:is(:hover, focus) {
         color: red;

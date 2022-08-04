@@ -13,14 +13,18 @@
   <div class="dropdown">
     <ul class="dropdown-list" role="list">
       <li class="dropdown-list__list-item" *ngFor="let artist of artists">
-        <a href="#" (click)="showArtist(artist)">
+        <a
+          href="#"
+          (click)="showArtist(artist)"
+          [style.backgroundColor]="artist.highlight ? 'red' : 'transparent'"
+        >
           <img
             class="mr-3 rounded align-self-center img-fluid"
             style="width:70px;"
-            [src]="https://github.com/twbs.png"
+            src="https://github.com/twbs.png"
             alt="{{ 'Photo of ' + artist.name }}"
           />
-          /><strong>{{ artist.name }}</strong>
+          <strong>{{ artist.name }}</strong>
           <p>{{ artist.reknown }}</p></a
         >
       </li>
