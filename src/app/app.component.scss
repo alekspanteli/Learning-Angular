@@ -1,5 +1,39 @@
-.wrapper {
-  p {
-    color: red;
+.card {
+  border: 1px solid gray;
+  padding: 20px;
+  margin-block-start: 20px;
+  &__title {
+    font-size: 2rem;
+  }
+}
+
+.form {
+  &__input {
+    width: 100%;
+  }
+}
+
+.wrap {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  left: 0;
+  z-index: 10;
+  background-color: gray;
+  width: 100%;
+}
+
+.dropdown-list {
+  display: grid;
+  row-gap: 10px;
+  &__list-item {
+    > a {
+      color: green;
+      &:is(:hover, focus) {
+        color: red;
+      }
+    }
   }
 }

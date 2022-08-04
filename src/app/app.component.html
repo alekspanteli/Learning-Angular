@@ -1,3 +1,23 @@
-<div class="wrapper">
-  <p>test</p>
+<div class="wrap">
+  <div class="grid">
+    <article class="card">
+      <h3 class="card__title">Artist directory</h3>
+      <div class="form">
+        <div class="form__label" *ngIf="query">
+          <strong>For:</strong>{{ query }}
+        </div>
+        <input type="text" class="form__input" />
+      </div>
+    </article>
+  </div>
+  <div class="dropdown">
+    <ul class="dropdown-list" role="list">
+      <li class="dropdown-list__list-item" *ngFor="let artist of artists">
+        <a href="#" (click)="showArtist(artist)"
+          ><strong>{{ artist.name }}</strong>
+          <p>{{ artist.reknown }}</p></a
+        >
+      </li>
+    </ul>
+  </div>
 </div>
