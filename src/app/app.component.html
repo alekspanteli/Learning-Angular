@@ -18,16 +18,11 @@
           (click)="showArtist(artist)"
           [style.backgroundColor]="artist.highlight ? 'red' : 'transparent'"
         >
-          <img
-            class="mr-3 rounded align-self-center img-fluid"
-            style="width:70px;"
-            src="https://github.com/twbs.png"
-            alt="{{ 'Photo of ' + artist.name }}"
-          />
-          <strong>{{ artist.name }}</strong>
-          <p>{{ artist.reknown }}</p></a
-        >
+          <app-artist-items [artist]="artist"></app-artist-items>
+        </a>
       </li>
     </ul>
   </div>
 </div>
+
+<!-- <app-artist-items [artist]="artist"></app-artist-items> -->
