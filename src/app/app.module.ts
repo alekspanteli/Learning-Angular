@@ -6,10 +6,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { ArtistItemsComponent } from './artist-items/artist-items.component';
 import { HelloComponent } from './hello.component';
+import { SearchArtistsPipe } from './search-artists.pipe';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, HttpClientModule],
-  declarations: [AppComponent, ArtistItemsComponent, HelloComponent],
+  declarations: [
+    AppComponent,
+    ArtistItemsComponent,
+    HelloComponent,
+    SearchArtistsPipe,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

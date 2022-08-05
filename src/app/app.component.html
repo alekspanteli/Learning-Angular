@@ -12,7 +12,10 @@
   </div>
   <div class="dropdown">
     <ul class="dropdown-list" role="list">
-      <li class="dropdown-list__list-item" *ngFor="let artist of artists">
+      <li
+        class="dropdown-list__list-item"
+        *ngFor="let artist of artists | searchArtists: query"
+      >
         <a
           href="#"
           (click)="showArtist(artist)"
