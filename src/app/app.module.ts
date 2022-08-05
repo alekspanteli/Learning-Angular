@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ArtistItemsComponent } from './artist-items/artist-items.component';
+import { ArtistDetailsComponent } from './artist-details/artist-details.component';
 import { HelloComponent } from './hello.component';
 import { SearchArtistsPipe } from './search-artists.pipe';
 
@@ -15,6 +16,7 @@ import { SearchArtistsPipe } from './search-artists.pipe';
     ArtistItemsComponent,
     HelloComponent,
     SearchArtistsPipe,
+    ArtistDetailsComponent,
   ],
   bootstrap: [AppComponent],
 })

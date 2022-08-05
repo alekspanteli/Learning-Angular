@@ -11,14 +11,14 @@
     </article>
   </div>
   <div class="dropdown">
-    <ul class="dropdown-list" role="list">
+    <ul class="dropdown-list" role="list" *ngIf="query">
       <li
         class="dropdown-list__list-item"
         *ngFor="let artist of artists | searchArtists: query"
       >
         <a
           href="#"
-          (click)="showArtist(artist)"
+          (click)="showArtist(artist); query = ''"
           [style.backgroundColor]="artist.highlight ? 'red' : 'transparent'"
         >
           <app-artist-items [artist]="artist"></app-artist-items>
@@ -26,6 +26,11 @@
       </li>
     </ul>
   </div>
+
+  <app-artist-details
+    *ngIf="currentArtist"
+    [artist]="currentArtist"
+  ></app-artist-details>
 </div>
 
 <!-- <app-artist-items [artist]="artist"></app-artist-items> -->
